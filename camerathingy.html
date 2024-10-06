@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesture Control Web App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+      body {
+        background-color: #070708; /* Dark blue/black blue */
+        color: #ffffff; /* White text */
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        text-align: center;
+        margin-top: 50px;
+      }
+      .card {
+        background-color: #20293c; /* Medium blue */
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        transition: 0.3s;
+        color: #ffffff; /* White text */
+      }
+      .card:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+      }
+      .card-title {
+        color: #ffa325; /* Orange */
+      }
+      .video-container {
+        border: 5px solid #477cb4; /* Light blue border */
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .footer {
+        margin-top: 50px;
+        color: #477cb4; /* Light blue */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card p-4">
+        <h1 class="card-title mb-4">Gesture Control Web App</h1>
+        <div class="video-container">
+          <img src="{{ url_for('video_feed') }}" class="img-fluid" alt="Gesture Control Video Feed">
+        </div>
+      </div>
+      <div class="footer">
+        <p>Powered by Flask, Mediapipe, and Whisper</p>
+      </div>
+    </div>
+  </body>
+</html>
